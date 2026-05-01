@@ -1,4 +1,5 @@
 <Solution>
+  <Project Path="GestionEmpleados.BL/GestionEmpleados.BL.csproj" Id="632187a8-4079-49b4-bdce-63afec316ba4" />
   <Project Path="GestionEmpleados.DA/GestionEmpleados.DA.csproj" />
   <Project Path="GestionEmpleados/GestionEmpleados.csproj" />
 </Solution>

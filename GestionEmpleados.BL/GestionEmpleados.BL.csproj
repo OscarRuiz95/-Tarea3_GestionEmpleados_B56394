@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GestionEmpleados.DA\GestionEmpleados.DA.csproj" />
+    <ProjectReference Include="..\GestionEmpleados\GestionEmpleados.csproj" />
+  </ItemGroup>
+
+</Project>
