@@ -16,4 +16,10 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\GestionEmpleados.BL\GestionEmpleados.BL.csproj" />
+    <ProjectReference Include="..\GestionEmpleados.DA\GestionEmpleados.DA.csproj" />
+    <ProjectReference Include="..\GestionEmpleados.Models\GestionEmpleados.Models.csproj" />
+  </ItemGroup>
+
 </Project>

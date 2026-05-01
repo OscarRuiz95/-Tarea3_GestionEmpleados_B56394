@@ -1,5 +1,6 @@
 <Solution>
   <Project Path="GestionEmpleados.BL/GestionEmpleados.BL.csproj" Id="632187a8-4079-49b4-bdce-63afec316ba4" />
   <Project Path="GestionEmpleados.DA/GestionEmpleados.DA.csproj" />
+  <Project Path="GestionEmpleados.Models/GestionEmpleados.Models.csproj" Id="36bda4cf-c5b8-4f69-b96f-737737702dea" />
   <Project Path="GestionEmpleados/GestionEmpleados.csproj" />
 </Solution>

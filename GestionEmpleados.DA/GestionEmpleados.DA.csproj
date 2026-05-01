@@ -11,7 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GestionEmpleados\GestionEmpleados.csproj" />
+    <ProjectReference Include="..\GestionEmpleados.Models\GestionEmpleados.Models.csproj" />
   </ItemGroup>
+
 
 </Project>

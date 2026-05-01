@@ -1,0 +1,85 @@
+@model IEnumerable<GestionEmpleados.Models.Empleado>
+
+@{
+    ViewData["Title"] = "Empleados";
+    var busqueda = ViewBag.Busqueda as string ?? string.Empty;
+    var pagina = (int)ViewBag.Pagina;
+    var tamano = (int)ViewBag.Tamano;
+    var total = (int)ViewBag.Total;
+    var totalPages = (int)ViewBag.TotalPages;
+}
+
+<h1>Empleados</h1>
+
+<form method="get" class="row g-2 mb-3">
+    <div class="col-auto">
+        <input type="text" name="busqueda" value="@busqueda" class="form-control" placeholder="Buscar por nombre, apellido o departamento" />
+    </div>
+    <div class="col-auto">
+        <button type="submit" class="btn btn-primary">Buscar</button>
+        <a asp-action="Index" class="btn btn-secondary">Limpiar</a>
+    </div>
+    <div class="col-auto ms-auto">
+        <a asp-action="Create" class="btn btn-success">Nuevo Empleado</a>
+    </div>
+</form>
+
+<p>Mostrando página @pagina de @totalPages. Total resultados: @total</p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Departamento</th>
+            <th>Salario</th>
+            <th>Fecha Ingreso</th>
+            <th>Estado</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var emp in Model)
+{
+    <tr>
+        <td>@emp.NombreCompleto</td>
+        <td>@emp.Departamento</td>
+        <td>@emp.Salario.ToString("C0")</td>
+        <td>@emp.FechaIngreso.ToString("yyyy-MM-dd")</td>
+        <td>
+            @if (emp.Activo)
+            {
+                <span class="badge bg-success">Activo</span>
+            }
+            else
+            {
+                <span class="badge bg-danger">Dado de Baja</span>
+            }
+        </td>
+        <td>
+            <a asp-action="Edit" asp-route-id="@emp.Id" class="btn btn-sm btn-primary">Editar</a>
+            <form asp-action="ToggleActivo" method="post" class="d-inline">
+                <input type="hidden" name="id" value="@emp.Id" />
+                <input type="hidden" name="busqueda" value="@busqueda" />
+                <input type="hidden" name="pagina" value="@pagina" />
+                <button type="submit" class="btn btn-sm @(emp.Activo ? "btn-warning" : "btn-success")">@(emp.Activo ? "Dar de Baja" : "Activar")</button>
+                @Html.AntiForgeryToken()
+            </form>
+        </td>
+    </tr>
+}
+    </tbody>
+</table>
+
+<nav>
+    <ul class="pagination">
+        <li class="page-item @(pagina <= 1 ? "disabled" : "")">
+            <a class="page-link" href="?busqueda=@busqueda&pagina=@(pagina-1)">Anterior</a>
+        </li>
+        <li class="page-item disabled">
+            <span class="page-link">Página @pagina de @totalPages</span>
+        </li>
+        <li class="page-item @(pagina >= totalPages ? "disabled" : "")">
+            <a class="page-link" href="?busqueda=@busqueda&pagina=@(pagina+1)">Siguiente</a>
+        </li>
+    </ul>
+</nav>

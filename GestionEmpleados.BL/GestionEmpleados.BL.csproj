@@ -8,7 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\GestionEmpleados.DA\GestionEmpleados.DA.csproj" />
-    <ProjectReference Include="..\GestionEmpleados\GestionEmpleados.csproj" />
+    <ProjectReference Include="..\GestionEmpleados.Models\GestionEmpleados.Models.csproj" />
   </ItemGroup>
 
 </Project>
