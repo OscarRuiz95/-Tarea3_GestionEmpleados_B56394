@@ -8,7 +8,7 @@ namespace GestionEmpleados.Controllers
     {
         public IActionResult Index()
         {
-            // Redirect root to Empleados index as main page
+            
             return RedirectToAction("Index", "Empleados");
         }
 
