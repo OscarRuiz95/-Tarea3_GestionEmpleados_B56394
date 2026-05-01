@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="GestionEmpleados.DA/GestionEmpleados.DA.csproj" />
+  <Project Path="GestionEmpleados.Models/GestionEmpleados.Models.csproj" />
+  <Project Path="GestionEmpleados/GestionEmpleados.csproj" />
+</Solution>
