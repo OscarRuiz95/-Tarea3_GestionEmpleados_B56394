@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
 namespace GestionEmpleados.Controllers
+//Test para ver si no me cargue el programa por andar jugando con los commits
 {
     public class HomeController : Controller
     {
