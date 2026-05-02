@@ -1,21 +1,21 @@
 Tarea 3 - Sistema de Gestión de Empleados
 
-Descripcion:
+Descripcion
 
 El sistema de Gestión de Empleados con ASP.NET Core MVC y Entity Framework Core, aplicando el patrón de Repositorio,
 Incluye funcionalidades de búsqueda, paginación y alta/baja lógica de empleados.
 
-Informacion del estudiante:
+Informacion del estudiante
 
 Nombre: Oscar Fernando Ruiz Perez
 
 Carnet: B56394
 
-Repositorio:
+Repositorio
 
 https://github.com/OscarRuiz95/-Tarea3_GestionEmpleados_B56394.git
 
-Funcionalidades principales:
+Funcionalidades principales
 
 CRUD completo de empleados (Create, Read, Update)
 
